@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Newsletter from "./components/Newsletter";
 import Portfolio from "./components/Portfolio";
-
+import Products  from "./components/Products.jsx"
 import ScrollToTop from "./components/ScrollToTop";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
@@ -42,7 +42,7 @@ export default function App() {
       <Services />
       <Portfolio />
       <Testimonials />
-    
+      <Products />
       <Newsletter />
       <Footer />
     </>

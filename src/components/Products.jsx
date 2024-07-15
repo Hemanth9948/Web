@@ -1,31 +1,35 @@
 import React from "react";
 import styled from "styled-components";
-import product1 from "../assets/product1.jpg";
-import product2 from "../assets/product2.jpg";
-import product3 from "../assets/product3.jpg";
-import product4 from "../assets/product4.jpg";
+//import product1 from "../assets/product1.jpg";
+//import product2 from "../assets/product2.jpg";
+//import product3 from "../assets/product3.jpg";
+//import product4 from "../assets/product4.jpg";
+import andhra from "../assets/andhra.jpeg";
+import Telangana from "../assets/Telangana.jpeg";
+import maharastra from "../assets/maharastra.jpeg";
+import Tamilnadu from "../assets/Tamilnadu.jpeg"
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 export default function Products() {
   const data = [
     {
-      image: product1,
-      name: "Chicken Burger",
+      image: andhra,
+      name: "Andhra Pradesh",
       price: "$22.4/pcs",
     },
     {
-      image: product2,
-      name: "Toasted Bread",
+      image: Telangana,
+      name: "Telangana",
       price: "$5.5/pcs",
     },
     {
-      image: product3,
-      name: "Egg Sandwich",
+      image: maharastra,
+      name: "Maharastra",
       price: "$8/pcs",
     },
 
     {
-      image: product4,
-      name: "Raspberry Cake",
+      image: Tamilnadu,
+      name: "Tamilnadu",
       price: "$12.5/pcs",
     },
   ];
@@ -33,7 +37,7 @@ export default function Products() {
     <Section id="products">
       <div className="title">
         <h1>
-          <span>Favourite</span> All the time!
+          <span>Locate YOUR</span> Restaurent!
         </h1>
       </div>
       <div className="products">
@@ -44,9 +48,9 @@ export default function Products() {
                 <img src={product.image} alt="" />
               </div>
               <h2>{product.name}</h2>
-              <h3>{product.price}</h3>
-              <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
-              <button>Buy Now</button>
+              
+              <p>You can Locate your Restaurent  spot where you want to meet</p>
+              <button>PREMIUM</button>
             </div>
           );
         })}
@@ -68,8 +72,11 @@ const Section = styled.section`
       gap: 0.6rem;
       justify-content: center;
       align-items: center;
-      h3 {
+      a {
         color: #fc4958;
+        font-size: 1.4rem;
+        transition: 0.5s ease-in-out;
+        
       }
       p {
         text-align: center;

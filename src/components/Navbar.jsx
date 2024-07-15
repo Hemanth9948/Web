@@ -40,7 +40,9 @@ export default function Navbar() {
           <li>
             <a href="#testimonials">Choice</a>
           </li>
-          
+          <li>
+            <a href="#products">Location</a>
+          </li>
           <li>
             <a href="#newsletter">SignIn/SignUp</a>
           </li>

@@ -10,17 +10,18 @@ export default function Testimonials() {
       <div className="container">
         <div className="title">
           <h1>
-            <span>choose </span>your choice
+            <span>choose</span>your choice
           </h1>
         </div>
         <div className="testimonials">
           <div className="testimonial">
             <div className="image">
-              <img src={boys} alt="" />
+              <img src={boys} alt=" " />
             </div>
             <p>
              Establish communication with Male's
             </p>
+            <button>PREMIUM</button>
           </div>
           <div className="testimonial">
             <div className="image">
@@ -29,6 +30,7 @@ export default function Testimonials() {
             <p>
              Establish communication with female's
             </p>
+            <button>Premium</button>
           </div>
           <div className="testimonial">
             <div className="image">
@@ -37,6 +39,7 @@ export default function Testimonials() {
             <p>
               Establish communication random 
             </p>
+            <button>BASIC </button>
           </div>
         </div>
       </div>
@@ -94,6 +97,19 @@ const Section = styled.section`
           img {
             height: 10rem;
           }
+        }
+        button {
+        border: none;
+        padding: 1rem 4rem;
+        font-size: 1.4rem;
+        color: white;
+        border-radius: 4rem;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        background: linear-gradient(to right, #fc4958, #e85d04);
+        text-transform: uppercase;
+        &:hover {
+          background: linear-gradient(to right, #e85d04, #fc4958);
         }
       }
     }

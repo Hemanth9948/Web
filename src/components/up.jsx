@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { TitleStyles } from "./ReusableStyles";
-export default function Newsletter() {
+import { TitleStyles } from "../ReusableStyles";
+export default function up() {
   return (
     <Section id="newsletter">
       <div className="title">
@@ -25,12 +25,10 @@ export default function Newsletter() {
         
       </div>
       <div className="container">
-      <span>
-          <button type="submit">SignIn</button>
-      </span>
-      <span className="button-space">
-          <button type="submit">SignUp</button>
-      </span>
+       <span>
+       <button type="submit">SignIn</button>
+        </span>
+        <button type="submit">SignUp</button>
       </div>
     </Section>
   );
@@ -57,7 +55,6 @@ const Section = styled.section`
     }
     span {
       padding: 1rem 2rem;
-      padding-right:2rem;
       background-color: transparent;
       border: none;
       font-size: 1.2rem;
@@ -65,13 +62,8 @@ const Section = styled.section`
       text-transform: uppercase;
       letter-spacing: 0.5rem;
     }
-      p{
-        padding: 1rem 1rem;
-        display: inline-block;
-        background-color: white;
-      }
     button {
-      padding: 1rem 2rem;
+      padding: 1rem 5rem;
       background-color: transparent;
       border: none;
       font-size: 1.3rem;
@@ -84,11 +76,6 @@ const Section = styled.section`
         letter-spacing: 0.6rem;
         padding: 1rem 4.7rem;
       }
-    }
-      .button-space {
-      display: inline-block;
-      background-color:#f9c74f;
-      width: 17rem; /* Adjust the width to control the space */
     }
   }
   @media screen and (min-width: 260px) and (max-width: 1080px) {
