@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Footer from '../Footer';
-import Newsletter from '../Newsletter.jsx';
 import Hero from "../Hero";
 import Navbar from "../Navbar";
 import Portfolio from "../Portfolio";
@@ -9,10 +8,8 @@ import ScrollToTop from "../ScrollToTop";
 import Services from "../Services";
 import Testimonials from "../Testimonials";
 import scrollreveal from "scrollreveal";
-import { useAuth } from '../contexts/authContext/index.jsx';
 
 const Home = () => {
-    const { currentUser } = useAuth();
     useEffect(() => {
         const sr = scrollreveal({
           origin: "top",
@@ -46,7 +43,6 @@ const Home = () => {
       <Portfolio />
       <Testimonials />
       <Products />
-      <Newsletter/>
       <Footer />
         </div>
     )

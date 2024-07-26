@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo1.jpg";
+import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 export default function Navbar() {
@@ -44,7 +45,7 @@ export default function Navbar() {
             <a href="#products">Location</a>
           </li>
           <li>
-            <a href="#newsletter">SignIn/SignUp</a>
+          <Link to="/Login">SignIn/SignUp</Link>
           </li>
         </ul>
       </Nav>
@@ -81,7 +82,7 @@ export default function Navbar() {
           </li>
           <li>
             <a href="#newsletter" onClick={() => setNavbarState(false)}>
-              Newsletter
+            SignIn/SignUp
             </a>
           </li>
         </ul>

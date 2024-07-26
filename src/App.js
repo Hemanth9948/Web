@@ -1,54 +1,22 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Newsletter from "./components/Newsletter";
-import Portfolio from "./components/Portfolio";
-import Products from "./components/Products";
-import ScrollToTop from "./components/ScrollToTop";
-import Services from "./components/Services";
-import Testimonials from "./components/Testimonials";
-import scrollreveal from "scrollreveal";
-import Header from "./components/header";
-import Home from "./components/home";
-import { AuthProvider } from "./components/contexts/authContext";
+// App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from './contexts/authContext'; // Adjust the path as needed
+import Login from './components/auth/login'; // Adjust the path as needed
+import Home from './components/home';
 
-export default function App() {
-  useEffect(() => {
-    const sr = scrollreveal({
-      origin: "top",
-      distance: "80px",
-      duration: 2000,
-      reset: false,
-    });
-    sr.reveal(
-      `
-        nav,
-        #home,
-        #services,
-        #portfolio,
-        #testimonials,
-        #products,
-        #newsletter,
-        .footer
-    `,
-      {
-        opacity: 0,
-        interval: 200,
-      }
-    );
-  }, []);
-
+function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <Header />
+    <Router>
+      <AuthProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* Add more routes as needed */}
+          <Route path="/login" element={<Login />} />
+          {/* Define other routes here */}
         </Routes>
-      </Router>
-    </AuthProvider>
+      </AuthProvider>
+    </Router>
   );
 }
+
+export default App;

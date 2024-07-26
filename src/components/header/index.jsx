@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useAuth } from '../../components/contexts/authContext/index'
-import { doSignOut } from '../firebase/auth'
+import { useAuth } from '../../contexts/authContext'
+import { doSignOut } from '../../firebase/auth'
 
 const Header = () => {
     const navigate = useNavigate()
@@ -16,7 +16,7 @@ const Header = () => {
                     </>
                     :
                     <>
-                        <Link className='text-sm text-blue-600 underline' to={'/'}></Link>
+                        <Link className='text-sm text-blue-600 underline' to={'/home'}></Link>
                         <Link className='text-sm text-blue-600 underline' to={'/'}></Link>
                     </>
             }
