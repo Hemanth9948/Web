@@ -35,7 +35,7 @@ const Login = () => {
         <div style={{
             background:image
         }}>
-            {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
+            {userLoggedIn && (<Navigate to={'/userpage'} replace={true} />)}
             <Modal isOpen={true} style={{
                 overlay:{
                     background:image
@@ -84,7 +84,7 @@ const Login = () => {
                         >
                             {isSigningIn ? 'Signing In...' : 'Sign In'}
                         </button>
-                    <p className="text-center text-sm">Don't have an account? <Link to={'/register'} className="hover:underline font-bold">Sign up</Link></p>
+                    <p className="text-center text-sm">Don't have an account? <Link to={'/signup'} className="hover:underline font-bold">Sign up</Link></p>
                     <div className='flex flex-row text-center w-full'>
                         <div className='border-b-2 mb-2.5 mr-2 w-full'></div><div className='text-sm font-bold w-fit'>OR</div><div className='border-b-2 mb-2.5 ml-2 w-full'></div>
                     </div>
